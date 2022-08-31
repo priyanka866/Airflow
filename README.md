@@ -1,6 +1,7 @@
 # Airflow
 Airflow Setup in kubernetes 
 source-https://marclamberti.com/blog/airflow-on-kubernetes-get-started-in-10-mins/
+https://www.astronomer.io/events/recaps/official-airflow-helm-chart/
 Helm chart-https://www.notion.so/Airflow-Helm-Chart-Quick-start-for-Beginners-3e8ee61c8e234a0fb775a07f38a0a8d4
 
 Prerequisites
@@ -32,6 +33,8 @@ kubectl get namespaces
 
 # Install the Airflow Helm Chart
 helm install airflow apache-airflow/airflow --namespace airflow --debug
+Update excecutor to KubernetesExecutor in values.yml
+eg= executor: "KubernetesExecutor"
 
 # Get pods
 kubectl get pods -n airflow
@@ -48,5 +51,5 @@ Note-it will be [--timeout] unlike what mentioned in the source.
 # Port forward 8080:8080
 kubectl port-forward svc/airflow-webserver 8080:8080 -n airflow --context kind-airflow-cluster
 
-#GIT SYNC
+# GIT SYNC STEPS
 
