@@ -47,3 +47,6 @@ Note-it will be [--timeout] unlike what mentioned in the source.
 
 # Port forward 8080:8080
 kubectl port-forward svc/airflow-webserver 8080:8080 -n airflow --context kind-airflow-cluster
+
+#GIT SYNC
+
