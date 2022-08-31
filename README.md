@@ -32,7 +32,9 @@ kubectl create namespace airflow
 kubectl get namespaces
 
 # Install the Airflow Helm Chart
+helm search repo airflow
 helm install airflow apache-airflow/airflow --namespace airflow --debug
+helm show values apache-airflow/airflow > values.yaml
 Update excecutor to KubernetesExecutor in values.yml
 eg= executor: "KubernetesExecutor"
 
