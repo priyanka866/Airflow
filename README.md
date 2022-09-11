@@ -57,3 +57,5 @@ kubectl port-forward svc/airflow-webserver 8080:8080 -n airflow --context kind-a
 kubectl get pods -n airflow
 2. Log pods 
 kubectl logs <<Pod_name>> -n airflow -c scheduler  (-c is used to specify which container)
+
+#Airflow git sync
