@@ -44,8 +44,8 @@ kubectl get pods -n airflow
 
 # Check release
 helm ls -n airflow
+If for some reasons the release is stuck in pending-install or timed out
 
-# If for some reasons the release is stuck in pending-install or timed out
 # Resinstall the chart
 helm delete airflow --namespace airflow
 helm install airflow apache-airflow/airflow --namespace airflow --debug --timeout 10m0s
