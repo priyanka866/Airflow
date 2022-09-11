@@ -11,6 +11,7 @@ Prerequisites
 4) Docker
 
 # Create a kubernetes cluster of 1 control plane and 3 worker nodes
+Create a folder and add kind-cluster.yml
 kind create cluster --name airflow-cluster --config kind-cluster.yaml
 
 # Check the cluster info
@@ -52,6 +53,7 @@ Note-it will be [--timeout] unlike what mentioned in the source.
 
 # Port forward 8080:8080
 kubectl port-forward svc/airflow-webserver 8080:8080 -n airflow --context kind-airflow-cluster
-
-# GIT SYNC STEPS
-
+1. View pods
+kubectl get pods -n airflow
+2. Log pods 
+kubectl logs <<Pod_name>> -n airflow -c scheduler  (-c is used to specify which container)
