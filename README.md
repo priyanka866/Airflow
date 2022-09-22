@@ -59,4 +59,4 @@ kubectl get pods -n airflow
 kubectl logs <<Pod_name>> -n airflow -c scheduler  (-c is used to specify which container)
 
 #Airflow git sync
-Create a ssh key and add into the directory 
+Create a ssh key and add into the git repository
